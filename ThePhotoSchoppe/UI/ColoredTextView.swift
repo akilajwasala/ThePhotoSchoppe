@@ -17,6 +17,13 @@ class ColoredTextView: UITextField {
         }
     }
     
+    @IBInspectable
+    var cornerRadius: CGFloat = 0.0 {
+        didSet {
+            self.layer.cornerRadius = cornerRadius
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -27,5 +34,8 @@ class ColoredTextView: UITextField {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        layer.borderColor = UIColor.lightGray.cgColor
+        layer.borderWidth = 1
+        layer.masksToBounds = true
     }
 }

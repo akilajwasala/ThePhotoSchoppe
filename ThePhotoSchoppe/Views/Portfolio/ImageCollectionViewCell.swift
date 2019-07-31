@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ImageCollectionViewCell: UICollectionViewCell {
     
@@ -18,6 +19,11 @@ class ImageCollectionViewCell: UICollectionViewCell {
     }
 
     func setObject(item: ImageItem) {
-        imgView.image = #imageLiteral(resourceName: "backgroundImage")
+        if let imageUrl = item.media?.m {
+            imgView?.sd_setImage(with: URL(string:imageUrl), completed: nil)
+        } else {
+            imgView.image = #imageLiteral(resourceName: "navBar")
+        }
+        lblDate.text = item.date_taken
     }
 }

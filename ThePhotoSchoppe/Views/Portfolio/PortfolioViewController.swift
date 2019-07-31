@@ -14,19 +14,10 @@ class PortfolioViewController: UIViewController {
     private var viewModel = PortfolioViewModel()
     private var imageItems = [ImageItem]()
     @IBOutlet var pageControl: UIPageControl!
+    @IBOutlet var collectionViewFeed: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        imageItems.append(ImageItem(date: "24 Jun 2019", link: "", image: #imageLiteral(resourceName: "backgroundImage")))
-//        imageItems.append(ImageItem(date: "24 Jun 2019", link: "", image: #imageLiteral(resourceName: "backgroundImage")))
-//        imageItems.append(ImageItem(date: "24 Jun 2019", link: "", image: #imageLiteral(resourceName: "backgroundImage")))
-//        imageItems.append(ImageItem(date: "24 Jun 2019", link: "", image: #imageLiteral(resourceName: "backgroundImage")))
-//        imageItems.append(ImageItem(date: "24 Jun 2019", link: "", image: #imageLiteral(resourceName: "backgroundImage")))
-//        imageItems.append(ImageItem(date: "24 Jun 2019", link: "", image: #imageLiteral(resourceName: "backgroundImage")))
-//        imageItems.append(ImageItem(date: "24 Jun 2019", link: "", image: #imageLiteral(resourceName: "backgroundImage")))
-//        imageItems.append(ImageItem(date: "24 Jun 2019", link: "", image: #imageLiteral(resourceName: "backgroundImage")))
-//        imageItems.append(ImageItem(date: "24 Jun 2019", link: "", image: #imageLiteral(resourceName: "backgroundImage")))
         
         viewModel.getPortfolio(callback: self)
     }
@@ -53,10 +44,15 @@ class PortfolioViewController: UIViewController {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-//            if let imageData = item.uiimage?.jpegData(compressionQuality: 0.5) {
-//                mail.addAttachmentData(imageData, mimeType: "image/jpeg", fileName: item.date_taken!)
-//                present(mail, animated: true)
-//            }
+            
+            if let url = item.media?.m {
+                let data = try? Data(contentsOf: URL(string: url)!)
+                if let imageData = data {
+                    mail.addAttachmentData(imageData, mimeType: "image/jpeg", fileName: item.date_taken!)
+                    present(mail, animated: true)
+                }
+            }
+            
         } else {
             print("Fail")
         }
@@ -109,6 +105,7 @@ extension PortfolioViewController : UIGetPortfolioDelegate {
         imageItems = items
         pageControl.numberOfPages = imageItems.count
 
+        collectionViewFeed.reloadData()
         print(items.count)
     }
     

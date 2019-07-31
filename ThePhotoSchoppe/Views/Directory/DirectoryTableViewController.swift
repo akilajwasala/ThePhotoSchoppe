@@ -32,10 +32,6 @@ class DirectoryTableViewController: UITableViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        //self.navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
     func updateView() {
         tableView.backgroundColor = UIColor.white
         headerview = tableView.tableHeaderView

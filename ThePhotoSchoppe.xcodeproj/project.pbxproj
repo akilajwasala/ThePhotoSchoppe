@@ -84,6 +84,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D2E010622F20A8800B33EE7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4DC6CE8422F0C1AA007ABE70 /* More */,
+				4DC6CE8322F0C1A0007ABE70 /* Directory */,
+				4DC6CE8222F0C198007ABE70 /* Portfolio */,
+				4D4A02F422EF9C0800607FAD /* Home */,
+				4D4A02E322EF8EF300607FAD /* Register */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		4D4A02C522EF88EA00607FAD = {
 			isa = PBXGroup;
 			children = (
@@ -105,17 +117,13 @@
 		4D4A02D022EF88EA00607FAD /* ThePhotoSchoppe */ = {
 			isa = PBXGroup;
 			children = (
-				4DC6CE9D22F1B08D007ABE70 /* Service */,
+				4DC6CE9D22F1B08D007ABE70 /* Services */,
 				4DC6CE9422F0D64A007ABE70 /* Resources */,
 				4DC6CE9122F0D1A8007ABE70 /* Models */,
-				4DC6CE8422F0C1AA007ABE70 /* More */,
-				4DC6CE8322F0C1A0007ABE70 /* Directory */,
-				4DC6CE8222F0C198007ABE70 /* Portfolio */,
-				4D4A02F422EF9C0800607FAD /* Home */,
+				4D2E010622F20A8800B33EE7 /* Views */,
 				4D4A02EE22EF99D300607FAD /* Common */,
-				4D4A02D122EF88EA00607FAD /* AppDelegate.swift */,
-				4D4A02E322EF8EF300607FAD /* Register */,
 				4D4A02E422EF8F1500607FAD /* UI */,
+				4D4A02D122EF88EA00607FAD /* AppDelegate.swift */,
 				4D4A02D822EF88EB00607FAD /* Assets.xcassets */,
 				4D4A02DA22EF88EB00607FAD /* LaunchScreen.storyboard */,
 				4D4A02DD22EF88EB00607FAD /* Info.plist */,
@@ -225,12 +233,12 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		4DC6CE9D22F1B08D007ABE70 /* Service */ = {
+		4DC6CE9D22F1B08D007ABE70 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				4DC6CE9E22F1B0C9007ABE70 /* APIManager.swift */,
 			);
-			path = Service;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		AE6A0271D873D1D53CFE2A0F /* Pods */ = {

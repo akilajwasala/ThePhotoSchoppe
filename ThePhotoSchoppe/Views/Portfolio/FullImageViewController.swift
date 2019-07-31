@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class FullImageViewController: UIViewController {
 
@@ -19,7 +20,13 @@ class FullImageViewController: UIViewController {
         super.viewDidLoad()
 
         if let item = selectedItem {
-            //imgView.image = item.uiimage
+            if let imageUrl = item.media?.m {
+                imgView?.sd_setImage(with: URL(string:imageUrl), completed: nil)
+            } else {
+                imgView.image = #imageLiteral(resourceName: "camera")
+            }
+        } else {
+            imgView.image = #imageLiteral(resourceName: "camera")
         }
     }
     

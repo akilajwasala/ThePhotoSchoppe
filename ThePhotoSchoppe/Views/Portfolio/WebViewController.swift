@@ -12,12 +12,11 @@ import WebKit
 class WebViewController: UIViewController {
 
     @IBOutlet var webView: WKWebView!
-    let sampleURL = "https://www.flickr.com/"
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        sendRequest(urlString: sampleURL)
+        sendRequest(urlString: URLProvider.BASE_URL)
     }
 
     // Convert String into URL and load the URL

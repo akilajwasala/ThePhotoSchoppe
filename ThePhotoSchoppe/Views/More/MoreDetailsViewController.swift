@@ -17,7 +17,10 @@ class MoreDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setUpLabels()
+    }
+    
+    fileprivate func setUpLabels() {
         btnSeeOnTheMap.setImage(#imageLiteral(resourceName: "rightArrow"), for: .normal)
         btnSeeOnTheMap.imageEdgeInsets = UIEdgeInsets(top: 6, left: 140, bottom: 6, right: 14)
         btnSeeOnTheMap.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 34)
@@ -29,10 +32,12 @@ class MoreDetailsViewController: UIViewController {
         let tapEmail = UITapGestureRecognizer(target: self, action: #selector(MoreDetailsViewController.emailTapped))
         lblEmailAddress.isUserInteractionEnabled = true
         lblEmailAddress.addGestureRecognizer(tapEmail)
+        
+        lblPhoneNumber.text = DymmyTexts.ContactPhoneNumber
     }
     
     @objc func phoneTapped(sender:UITapGestureRecognizer) {
-        guard let number = URL(string: "tel://" + "0710358144") else { return }
+        guard let number = URL(string: "tel://" + DymmyTexts.ContactPhoneNumber) else { return }
         UIApplication.shared.open(number)
     }
     
@@ -43,10 +48,6 @@ class MoreDetailsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        //self.navigationController?.setNavigationBarHidden(false, animated: true)
-    }
 
     @IBAction func btnClickMapView(_ sender: UIButton) {
         performSegue(withIdentifier: NamedSegues.SegueMoreToMap, sender: nil)
@@ -56,8 +57,8 @@ class MoreDetailsViewController: UIViewController {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-            mail.setToRecipients(["hello@IronOne.com"])
-            mail.setSubject("Inquiry for the Photo Schoppe")
+            mail.setToRecipients([DymmyTexts.ContactEmailAddress])
+            mail.setSubject(DymmyTexts.EmailSubject)
             
             present(mail, animated: true)
         } else {

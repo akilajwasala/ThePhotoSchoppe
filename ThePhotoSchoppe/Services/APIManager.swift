@@ -13,11 +13,11 @@ class APIManager {
     
     func getPhotoList(delegate: @escaping ([ImageItem], Bool) -> ()) {
         
-        Alamofire.request(URLProvider.PHOTO_FEED_API_URL, method: .get, headers: URLProvider.getHeaders()).responseJSON { response in
+        Alamofire.request(URLProvider.getUserPosts(), method: .get, headers: URLProvider.getHeaders()).responseJSON { response in
 
             if response.response?.statusCode == 200 {
-                if let imageArray = try? response.deserialize([ImageItem].self) {
-                    delegate(imageArray, true)
+                if let feed = try? response.deserialize(Feed.self) {
+                    delegate(feed.items ?? [], true)
                 } else {
                     delegate([],false)
                 }
@@ -30,16 +30,18 @@ class APIManager {
     
 }
 
+class Feed: Codable {
+    var items: [ImageItem]?
+}
+
 class ImageItem: Codable {
     var date_taken: String?
     var link: String?
-    //var uiimage: UIImage?
-    
-//    init(date: String, link: String, image: UIImage) {
-//        self.date_taken = date
-//        self.link = link
-//        self.uiimage = image
-//    }
+    var media: Media?
+}
+
+class Media: Codable {
+    var m: String?
 }
 
 //Can use seperate file for all extentions

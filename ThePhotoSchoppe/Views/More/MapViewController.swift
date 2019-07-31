@@ -31,7 +31,7 @@ class MapViewController: UIViewController {
         
         //Set the marker and focus on it
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-        let artwork = Artwork(title: "The Photo Shoppe", subtitle: "Colombo 00200", coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon))
+        let artwork = Artwork(title: DymmyTexts.AppName, subtitle: "Colombo 00200", coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon))
         mapView.addAnnotation(artwork)
         self.mapView.addAnnotation(artwork)
         self.mapView.setRegion(artwork.region, animated: true)
