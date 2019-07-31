@@ -9,12 +9,12 @@
 import UIKit
 import SDWebImage
 
-class FullImageViewController: UIViewController {
+class FullImageViewController: BaseViewController {
 
     @IBOutlet var imgView: UIImageView!
     var selectedItem: ImageItem?
     var emailButtonClickClosure: ((ImageItem) -> ())?
-    var webSiteButtonClickClosure: (() -> ())?
+    var webSiteButtonClickClosure: ((ImageItem) -> ())?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,7 @@ class FullImageViewController: UIViewController {
     @IBAction func btnClickWebView(_ sender: UIButton) {
         self.dismiss(animated: true) {
             self.makeOtherViewsOnlyPortrait()
-            self.webSiteButtonClickClosure?()
+            self.webSiteButtonClickClosure?(self.selectedItem!)
         }
     }
     

@@ -30,20 +30,6 @@ class APIManager {
     
 }
 
-class Feed: Codable {
-    var items: [ImageItem]?
-}
-
-class ImageItem: Codable {
-    var date_taken: String?
-    var link: String?
-    var media: Media?
-}
-
-class Media: Codable {
-    var m: String?
-}
-
 //Can use seperate file for all extentions
 extension DataResponse {
     

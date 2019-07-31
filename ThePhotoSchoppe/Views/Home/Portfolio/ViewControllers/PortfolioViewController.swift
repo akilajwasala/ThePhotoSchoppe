@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-class PortfolioViewController: UIViewController {
+class PortfolioViewController: BaseViewController {
     
     private var viewModel = PortfolioViewModel()
     private var imageItems = [ImageItem]()
@@ -34,9 +34,11 @@ class PortfolioViewController: UIViewController {
             fullImageVC.emailButtonClickClosure = { item in
                 self.sendEmail(item: item)
             }
-            fullImageVC.webSiteButtonClickClosure = { () in
-                self.performSegue(withIdentifier: NamedSegues.SeguePortfolioToWebView, sender: nil)
+            fullImageVC.webSiteButtonClickClosure = { (item) in
+                self.performSegue(withIdentifier: NamedSegues.SeguePortfolioToWebView, sender: item)
             }
+        } else if let webVC = segue.destination as? WebViewController {
+            webVC.selectedItem = sender as? ImageItem
         }
     }
     

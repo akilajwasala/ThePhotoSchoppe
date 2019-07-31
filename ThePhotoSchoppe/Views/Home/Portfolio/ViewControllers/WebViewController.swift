@@ -9,14 +9,19 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController {
+class WebViewController: BaseViewController {
 
     @IBOutlet var webView: WKWebView!
-
+    var selectedItem: ImageItem?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        sendRequest(urlString: URLProvider.BASE_URL)
+        if let url = selectedItem?.link {
+            sendRequest(urlString: url)
+        } else {
+            sendRequest(urlString: URLProvider.BASE_URL)
+        }
     }
 
     // Convert String into URL and load the URL

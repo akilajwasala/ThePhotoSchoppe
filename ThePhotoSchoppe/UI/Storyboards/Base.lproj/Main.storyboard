@@ -44,6 +44,9 @@
                                                                 <integer key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Bvl-aS-5QK"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VRi-vz-wFa" customClass="ColoredTextView" customModule="ThePhotoSchoppe" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="88.5" width="334" height="61.5"/>
@@ -59,6 +62,9 @@
                                                                 <integer key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="fTv-Ez-SVS"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WRS-cW-1pE" customClass="ColoredTextView" customModule="ThePhotoSchoppe" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="177" width="334" height="61.5"/>
@@ -74,6 +80,9 @@
                                                                 <integer key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="is6-Ik-R3j"/>
+                                                        </connections>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQL-fv-T25" customClass="RoundedButton" customModule="ThePhotoSchoppe" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="265.5" width="334" height="61.5"/>

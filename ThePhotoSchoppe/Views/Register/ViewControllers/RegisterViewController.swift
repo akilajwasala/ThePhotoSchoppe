@@ -9,7 +9,7 @@
 import UIKit
 import PopupDialog
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: BaseViewController {
 
     private var viewModel = RegisterViewModel()
 
@@ -22,7 +22,7 @@ class RegisterViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        setNavigationBar(isHidden: true)
     }
     
     @IBAction func btnClickRegister(_ sender: UIButton) {
@@ -59,4 +59,13 @@ extension RegisterViewController : UIRegistrationDelegate {
         self.showMessage(isError: true, title: Strings.ERROR, message: reason) {}
     }
     
+}
+
+extension RegisterViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+
 }

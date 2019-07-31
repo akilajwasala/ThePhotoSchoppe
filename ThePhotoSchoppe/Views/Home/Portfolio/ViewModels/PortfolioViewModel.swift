@@ -21,7 +21,7 @@ class PortfolioViewModel: NSObject {
         
         apiManager.getPhotoList { (imageItems, isSuccess) in
             if isSuccess {
-                callback.onGetPortfolioSuccess(items: imageItems)
+                callback.onGetPortfolioSuccess(items: Array(imageItems.prefix(10)))
             } else {
                 callback.onGetPortfolioFailed(reason: Strings.ERROR_API)
             }
