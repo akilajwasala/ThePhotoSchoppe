@@ -19,14 +19,14 @@ class DirectoryTableViewController: UITableViewController {
     private let headerheight : CGFloat = 250.0
     private let headercut : CGFloat = 50.0
     private let cellHeight : CGFloat = 138.0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.updateView()
     }
     
-    //If there are table view controllers more than one, and need to hide nav bars time to time we can use a BaseTableViewController and keep these methods as common
+    //If there are table view controllers more than one, and need to hide nav bars time to time we can use a BaseTableViewController and keep nav bar hide/show methods in common
     override func viewWillAppear(_ animated: Bool) {
         viewModel.getAllPhotographers(callback: self)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -97,7 +97,7 @@ extension DirectoryTableViewController : UIGetDirectoryDelegate {
     }
     
     func onGetDirectoryFailed(reason: String) {
-        
+        self.showMessage(isError: true, title: Strings.ERROR, message: reason) {}
     }
     
 }

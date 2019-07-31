@@ -23,10 +23,9 @@ class PortfolioViewModel: NSObject {
             if isSuccess {
                 callback.onGetPortfolioSuccess(items: imageItems)
             } else {
-                callback.onGetPortfolioFailed(reason: "")
+                callback.onGetPortfolioFailed(reason: Strings.ERROR_API)
             }
         }
-        
     }
 
 }

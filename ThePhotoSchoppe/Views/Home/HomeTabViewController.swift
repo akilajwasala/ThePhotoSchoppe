@@ -12,12 +12,6 @@ class HomeTabViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setBackButtonHidden(hidden: true)
-    }
-
-    func setBackButtonHidden(hidden: Bool) {
-        navigationItem.setHidesBackButton(hidden, animated: true)
     }
 
 }

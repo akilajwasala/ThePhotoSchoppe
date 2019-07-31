@@ -19,7 +19,7 @@ class DirectoryViewModel {
         callback.onGetDirectorySuccess(photographers: getDirectory().sorted(by: { $0.surname < $1.surname }))
     }
     
-    func getDirectory() -> [Photographer] {
+    fileprivate func getDirectory() -> [Photographer] {
         let url = Bundle.main.url(forResource: "Directory", withExtension: "plist")!
         let data = try! Data(contentsOf: url)
         let decoder = PropertyListDecoder()

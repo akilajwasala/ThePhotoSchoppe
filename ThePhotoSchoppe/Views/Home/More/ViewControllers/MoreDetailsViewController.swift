@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-class MoreDetailsViewController: UIViewController {
+class MoreDetailsViewController: BaseViewController {
 
     @IBOutlet var btnSeeOnTheMap: UIButton!
     @IBOutlet var lblPhoneNumber: UILabel!
@@ -33,12 +33,12 @@ class MoreDetailsViewController: UIViewController {
         lblEmailAddress.isUserInteractionEnabled = true
         lblEmailAddress.addGestureRecognizer(tapEmail)
         
-        lblPhoneNumber.text = DymmyTexts.ContactPhoneNumber
+        lblPhoneNumber.text  = DummyTexts.ContactPhoneNumber
+        lblEmailAddress.text = DummyTexts.ContactEmailAddress
     }
     
     @objc func phoneTapped(sender:UITapGestureRecognizer) {
-        guard let number = URL(string: "tel://" + DymmyTexts.ContactPhoneNumber) else { return }
-        UIApplication.shared.open(number)
+        sendPhoneCall()
     }
     
     @objc func emailTapped(sender:UITapGestureRecognizer) {
@@ -46,24 +46,27 @@ class MoreDetailsViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        setNavigationBar(isHidden: true)
     }
 
     @IBAction func btnClickMapView(_ sender: UIButton) {
         performSegue(withIdentifier: NamedSegues.SegueMoreToMap, sender: nil)
     }
     
-    func sendEmail() {
+    fileprivate func sendPhoneCall() {
+        guard let number = URL(string: "tel://" + DummyTexts.ContactPhoneNumber) else { return }
+        UIApplication.shared.open(number)
+    }
+    
+    fileprivate func sendEmail() {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-            mail.setToRecipients([DymmyTexts.ContactEmailAddress])
-            mail.setSubject(DymmyTexts.EmailSubject)
-            
+            mail.setToRecipients([DummyTexts.ContactEmailAddress])
+            mail.setSubject(DummyTexts.EmailSubject)
             present(mail, animated: true)
         } else {
-            print("Fail")
-            // show failure alert
+            self.showMessage(isError: true, title: Strings.ERROR, message: Strings.ERROR_NO_EMAIL_BOX) {}
         }
     }
 

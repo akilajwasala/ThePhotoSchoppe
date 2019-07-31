@@ -51,10 +51,12 @@ class PortfolioViewController: UIViewController {
                     mail.addAttachmentData(imageData, mimeType: "image/jpeg", fileName: item.date_taken!)
                     present(mail, animated: true)
                 }
+            } else {
+                self.showMessage(isError: true, title: Strings.ERROR, message: Strings.ERROR_NO_IMAGE_URL) {}
             }
             
         } else {
-            print("Fail")
+            self.showMessage(isError: true, title: Strings.ERROR, message: Strings.ERROR_NO_EMAIL_BOX) {}
         }
     }
 }
@@ -65,7 +67,6 @@ extension PortfolioViewController : MFMailComposeViewControllerDelegate {
         controller.dismiss(animated: true)
     }
 }
-
 
 extension PortfolioViewController : UICollectionViewDataSource {
     
@@ -104,13 +105,11 @@ extension PortfolioViewController : UIGetPortfolioDelegate {
     func onGetPortfolioSuccess(items: [ImageItem]) {
         imageItems = items
         pageControl.numberOfPages = imageItems.count
-
         collectionViewFeed.reloadData()
-        print(items.count)
     }
     
     func onGetPortfolioFailed(reason: String) {
-        print(reason)
+        self.showMessage(isError: true, title: Strings.ERROR, message: reason) {}
     }
     
 }

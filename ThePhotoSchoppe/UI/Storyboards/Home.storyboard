@@ -64,28 +64,28 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="telephone" translatesAutoresizingMaskIntoConstraints="NO" id="eEX-lN-b6H">
-                                                    <rect key="frame" x="138" y="69.5" width="22" height="22"/>
+                                                    <rect key="frame" x="138" y="72.5" width="22" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="39k-h2-x3f"/>
                                                         <constraint firstAttribute="width" constant="22" id="4Q9-7w-OUG"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="4KT-WS-35y">
-                                                    <rect key="frame" x="138" y="93" width="22" height="22"/>
+                                                    <rect key="frame" x="138" y="94" width="22" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="Aau-Ut-lNF"/>
                                                         <constraint firstAttribute="width" constant="22" id="wZw-HJ-piJ"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="telephone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uef-QG-GaA">
-                                                    <rect key="frame" x="170" y="70.5" width="184" height="19.5"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                                    <rect key="frame" x="170" y="75" width="184" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4B-dD-Xyq">
-                                                    <rect key="frame" x="170" y="95" width="184" height="18"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="13"/>
+                                                    <rect key="frame" x="170" y="96.5" width="184" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -145,7 +145,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="716-ji-Ftf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1672" y="1230"/>
+            <point key="canvasLocation" x="2581.1594202898555" y="1229.4642857142856"/>
         </scene>
         <!--More-->
         <scene sceneID="Dg7-2R-vnM">
@@ -170,7 +170,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAN-Ch-hYO">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBar" translatesAutoresizingMaskIntoConstraints="NO" id="fF8-Qg-C1v">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBar2" translatesAutoresizingMaskIntoConstraints="NO" id="fF8-Qg-C1v">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                     </imageView>
                                 </subviews>
@@ -264,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u6g-DA-kB0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2566.666666666667" y="1226.7857142857142"/>
+            <point key="canvasLocation" x="3476.811594202899" y="1226.7857142857142"/>
         </scene>
         <!--Visit Us-->
         <scene sceneID="xeI-DS-4DZ">
@@ -296,7 +296,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p8O-Aa-jLD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3396" y="1223"/>
+            <point key="canvasLocation" x="4305.7971014492759" y="1222.7678571428571"/>
         </scene>
         <!--Flickr Feed-->
         <scene sceneID="NSb-dj-C7j">
@@ -307,7 +307,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fsj-Sn-uUX">
-                                <rect key="frame" x="0.0" y="44" width="414" height="350"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="350"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="350" id="T9B-GD-wvf"/>
@@ -330,8 +330,8 @@
                                                     <rect key="frame" x="8" y="52" width="398" height="230"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 Jun 2019 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqa-pL-AS0">
-                                                    <rect key="frame" x="293" y="243" width="98" height="24"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <rect key="frame" x="287.5" y="243" width="103.5" height="24"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -357,7 +357,7 @@
                                 </connections>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="COj-D8-Axv">
-                                <rect key="frame" x="187.5" y="404" width="39" height="37"/>
+                                <rect key="frame" x="187.5" y="500" width="39" height="37"/>
                                 <color key="pageIndicatorTintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="currentPageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
@@ -372,7 +372,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uXi-Wb-4sg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Portfolio" image="tab1" id="ltL-14-Es8"/>
+                    <navigationItem key="navigationItem" title="Portfolio" id="G6i-NY-3eH"/>
                     <connections>
                         <outlet property="collectionViewFeed" destination="fsj-Sn-uUX" id="PF1-Qk-3mC"/>
                         <outlet property="pageControl" destination="COj-D8-Axv" id="mK1-yh-vkO"/>
@@ -382,7 +382,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wBN-cY-Nmy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="785.50724637681162" y="1228.7946428571429"/>
+            <point key="canvasLocation" x="1695.6521739130435" y="1228.7946428571429"/>
         </scene>
         <!--Full Image View Controller-->
         <scene sceneID="2Q5-io-duk">
@@ -463,7 +463,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVK-TN-YqQ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -499,7 +499,7 @@
                         <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="8Jl-oA-CiQ" kind="relationship" relationship="viewControllers" id="S27-D9-ECb"/>
+                        <segue destination="taz-6D-l1D" kind="relationship" relationship="viewControllers" id="S27-D9-ECb"/>
                         <segue destination="iQE-lr-73o" kind="relationship" relationship="viewControllers" id="1xh-nx-JpL"/>
                         <segue destination="zed-4O-sIL" kind="relationship" relationship="viewControllers" id="Kba-fH-d5q"/>
                     </connections>
@@ -508,11 +508,31 @@
             </objects>
             <point key="canvasLocation" x="1671" y="442"/>
         </scene>
+        <!--Portfolio-->
+        <scene sceneID="CNG-PO-ew3">
+            <objects>
+                <navigationController title="Portfolio" automaticallyAdjustsScrollViewInsets="NO" id="taz-6D-l1D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Portfolio" image="tab1" id="ltL-14-Es8"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="6D5-EY-I7I">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8Jl-oA-CiQ" kind="relationship" relationship="rootViewController" id="crM-4f-yxG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KyM-PO-cHc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="785.50724637681162" y="1228.7946428571429"/>
+        </scene>
     </scenes>
     <resources>
         <image name="close" width="128" height="128"/>
         <image name="email" width="512" height="512"/>
         <image name="navBar" width="700" height="467"/>
+        <image name="navBar2" width="900" height="601"/>
         <image name="tab1" width="24" height="24"/>
         <image name="tab2" width="24" height="24"/>
         <image name="tab3" width="24" height="24"/>

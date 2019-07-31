@@ -17,5 +17,10 @@ class RegisterViewModel {
 
     internal func register(userName: String, password: String, email: String?, callback: UIRegistrationDelegate) {
         callback.onUserRegistered()
+        
+        /*
+        if error
+         callback.onRegistrationFailed(reason: reason)
+         */
     }
 }

@@ -24,6 +24,6 @@ class ImageCollectionViewCell: UICollectionViewCell {
         } else {
             imgView.image = #imageLiteral(resourceName: "navBar")
         }
-        lblDate.text = item.date_taken
+        lblDate.text = item.date_taken?.getFormattedStringDate(inputFormat:DateFormats.ServerDateFormat, outputFormat: DateFormats.CommonDateFormat)
     }
 }

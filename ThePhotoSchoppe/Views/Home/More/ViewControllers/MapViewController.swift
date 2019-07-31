@@ -25,13 +25,12 @@ class MapViewController: UIViewController {
     }
     
     fileprivate func setMapViewAndMarker() {
-        
         let lat = 30.395414
         let lon = -97.753739
         
         //Set the marker and focus on it
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-        let artwork = Artwork(title: DymmyTexts.AppName, subtitle: "Colombo 00200", coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon))
+        let artwork = Artwork(title: DummyTexts.AppName, subtitle: DummyTexts.LocationSubtitle, coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon))
         mapView.addAnnotation(artwork)
         self.mapView.addAnnotation(artwork)
         self.mapView.setRegion(artwork.region, animated: true)
@@ -48,11 +47,11 @@ extension MapViewController : MKMapViewDelegate {
             annotation.subtitleVisibility = .adaptive
             return annotation
         }
-        
         return nil
     }
 }
 
+//Can use seperate class files
 class Artwork: NSObject, MKAnnotation {
     let title: String?
     let subtitle: String?
@@ -62,7 +61,6 @@ class Artwork: NSObject, MKAnnotation {
         self.title = title
         self.subtitle = subtitle
         self.coordinate = coordinate
-        
         super.init()
     }
     

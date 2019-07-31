@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public struct URLProvider {
     public static let BASE_URL_WEB = "https://www.flickr.com/"
@@ -39,9 +40,27 @@ public struct NamedSegues {
     public static let SeguePortfolioToWebView = "SeguePortfolioToWebView"
 }
 
-public struct DymmyTexts {
+public struct Strings {
+    public static let SUCCESS = "Success"
+    public static let REG_SUCCESS = "Registered Successfully"
+    public static let ERROR = "Error"
+    public static let ERROR_INVALID_USERNAME = "Atleast three letters need for an username"
+    public static let ERROR_INVALID_PASSWORD = "Atleast five letters need for a valid password"
+    public static let ERROR_INVALID_EMAIL = "Not a valid email address"
+    public static let ERROR_NO_EMAIL_BOX = "You have not configured the email box for this iphone"
+    public static let ERROR_NO_IMAGE_URL = "Image URL is missing"
+    public static let ERROR_API = "Invalid Request or Something Wrong"
+}
+
+public struct DummyTexts {
     public static let AppName = "The Photo Shoppe"
+    public static let LocationSubtitle = "Colombo 00200"
     public static let ContactPhoneNumber = "0110358144"
     public static let ContactEmailAddress = "hello@IronOne.com"
     public static let EmailSubject = "Inquiry for the Photo Schoppe"
+}
+
+public struct DateFormats {
+    public static let ServerDateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+    public static let CommonDateFormat = "dd MMM YYYY"
 }

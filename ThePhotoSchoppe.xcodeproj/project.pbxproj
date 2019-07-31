@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00C5F8B6C78AB8AA7DFABD69 /* Pods_ThePhotoSchoppe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC199C4421D586B21741B67 /* Pods_ThePhotoSchoppe.framework */; };
+		4D2E011D22F23C8100B33EE7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E011C22F23C8100B33EE7 /* BaseViewController.swift */; };
 		4D4A02D222EF88EA00607FAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4A02D122EF88EA00607FAD /* AppDelegate.swift */; };
 		4D4A02D422EF88EA00607FAD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4A02D322EF88EA00607FAD /* RegisterViewController.swift */; };
 		4D4A02D722EF88EA00607FAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D4A02D522EF88EA00607FAD /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D2E011C22F23C8100B33EE7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4D4A02CE22EF88EA00607FAD /* ThePhotoSchoppe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThePhotoSchoppe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D4A02D122EF88EA00607FAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D4A02D322EF88EA00607FAD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -87,13 +89,94 @@
 		4D2E010622F20A8800B33EE7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4DC6CE8422F0C1AA007ABE70 /* More */,
-				4DC6CE8322F0C1A0007ABE70 /* Directory */,
-				4DC6CE8222F0C198007ABE70 /* Portfolio */,
+				4D2E011B22F23C7300B33EE7 /* Base */,
 				4D4A02F422EF9C0800607FAD /* Home */,
 				4D4A02E322EF8EF300607FAD /* Register */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4D2E011222F239EC00B33EE7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DC6CE8B22F0C944007ABE70 /* DirectoryTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4D2E011322F239F700B33EE7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4DC6CE9722F0D8E9007ABE70 /* DirectoryViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4D2E011422F239FF00B33EE7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4DC6CE8D22F0CD06007ABE70 /* DirectoryTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4D2E011522F23A1100B33EE7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DC6CE8522F0C1CA007ABE70 /* PortfolioViewController.swift */,
+				4DC6CEA222F1D008007ABE70 /* FullImageViewController.swift */,
+				4DC6CEA422F1D030007ABE70 /* WebViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4D2E011622F23A2500B33EE7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4DC6CE9B22F1AF9C007ABE70 /* PortfolioViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4D2E011722F23A3200B33EE7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4DC6CEA022F1CC57007ABE70 /* ImageCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4D2E011822F23A5100B33EE7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D4A02D322EF88EA00607FAD /* RegisterViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4D2E011922F23A5900B33EE7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4D4A02EA22EF922C00607FAD /* RegisterViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4D2E011A22F23A7100B33EE7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DC6CE8922F0C20A007ABE70 /* MoreDetailsViewController.swift */,
+				4DC6CE9922F18195007ABE70 /* MapViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4D2E011B22F23C7300B33EE7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				4D2E011C22F23C8100B33EE7 /* BaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		4D4A02C522EF88EA00607FAD = {
@@ -134,8 +217,8 @@
 		4D4A02E322EF8EF300607FAD /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				4D4A02D322EF88EA00607FAD /* RegisterViewController.swift */,
-				4D4A02EA22EF922C00607FAD /* RegisterViewModel.swift */,
+				4D2E011822F23A5100B33EE7 /* ViewControllers */,
+				4D2E011922F23A5900B33EE7 /* ViewModels */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -182,6 +265,9 @@
 			isa = PBXGroup;
 			children = (
 				4DC6CE8022F0C009007ABE70 /* HomeTabViewController.swift */,
+				4DC6CE8422F0C1AA007ABE70 /* More */,
+				4DC6CE8322F0C1A0007ABE70 /* Directory */,
+				4DC6CE8222F0C198007ABE70 /* Portfolio */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -189,11 +275,9 @@
 		4DC6CE8222F0C198007ABE70 /* Portfolio */ = {
 			isa = PBXGroup;
 			children = (
-				4DC6CE8522F0C1CA007ABE70 /* PortfolioViewController.swift */,
-				4DC6CE9B22F1AF9C007ABE70 /* PortfolioViewModel.swift */,
-				4DC6CEA022F1CC57007ABE70 /* ImageCollectionViewCell.swift */,
-				4DC6CEA222F1D008007ABE70 /* FullImageViewController.swift */,
-				4DC6CEA422F1D030007ABE70 /* WebViewController.swift */,
+				4D2E011522F23A1100B33EE7 /* ViewControllers */,
+				4D2E011622F23A2500B33EE7 /* ViewModels */,
+				4D2E011722F23A3200B33EE7 /* Cells */,
 			);
 			path = Portfolio;
 			sourceTree = "<group>";
@@ -201,9 +285,9 @@
 		4DC6CE8322F0C1A0007ABE70 /* Directory */ = {
 			isa = PBXGroup;
 			children = (
-				4DC6CE8B22F0C944007ABE70 /* DirectoryTableViewController.swift */,
-				4DC6CE8D22F0CD06007ABE70 /* DirectoryTableViewCell.swift */,
-				4DC6CE9722F0D8E9007ABE70 /* DirectoryViewModel.swift */,
+				4D2E011222F239EC00B33EE7 /* ViewControllers */,
+				4D2E011422F239FF00B33EE7 /* Cells */,
+				4D2E011322F239F700B33EE7 /* ViewModels */,
 			);
 			path = Directory;
 			sourceTree = "<group>";
@@ -211,8 +295,7 @@
 		4DC6CE8422F0C1AA007ABE70 /* More */ = {
 			isa = PBXGroup;
 			children = (
-				4DC6CE8922F0C20A007ABE70 /* MoreDetailsViewController.swift */,
-				4DC6CE9922F18195007ABE70 /* MapViewController.swift */,
+				4D2E011A22F23A7100B33EE7 /* ViewControllers */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -378,6 +461,7 @@
 				4D4A02D422EF88EA00607FAD /* RegisterViewController.swift in Sources */,
 				4DC6CEA522F1D030007ABE70 /* WebViewController.swift in Sources */,
 				4DC6CE9F22F1B0C9007ABE70 /* APIManager.swift in Sources */,
+				4D2E011D22F23C8100B33EE7 /* BaseViewController.swift in Sources */,
 				4DC6CE8C22F0C944007ABE70 /* DirectoryTableViewController.swift in Sources */,
 				4DC6CE8622F0C1CA007ABE70 /* PortfolioViewController.swift in Sources */,
 				4D4A02EB22EF922C00607FAD /* RegisterViewModel.swift in Sources */,

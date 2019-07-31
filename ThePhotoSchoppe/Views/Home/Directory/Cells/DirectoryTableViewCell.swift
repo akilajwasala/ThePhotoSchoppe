@@ -21,7 +21,6 @@ class DirectoryTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.viewBackground.clipsToBounds = true
-        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

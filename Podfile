@@ -10,6 +10,6 @@ target 'ThePhotoSchoppe' do
 pod 'Alamofire', '4.8.1'
 pod 'SDWebImage', '~> 5.0'
 pod 'IQKeyboardManagerSwift'
-pod 'SwiftEntryKit', '1.1.1'
+pod 'PopupDialog', '~> 1.1'
 
 end
