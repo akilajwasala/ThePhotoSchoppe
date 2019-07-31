@@ -8,17 +8,26 @@
 
 import Foundation
 
+public struct URLProvider {
+    public static let PHOTO_FEED_API_URL = "https://www.flickr.com/services/feeds/photos_public.gne?format=json"
+    
+    public static func getHeaders() -> Dictionary<String, String>{
+        return ["Content-Type":"application/json"]
+    }
+}
+
 public struct ReuseIdentifiers {
-    public static let ChefItemCollectionViewCell = "ChefItemCollectionViewCell"
+    public static let DirectoryTableViewCell = "DirectoryTableViewCell"
+    public static let ImageCollectionViewCell = "ImageCollectionViewCell"
 }
 
 public struct NibName {
-    public static let ChefItemCollectionViewCell = "ChefItemCollectionViewCell"
+
 }
 
 public struct NamedSegues {
     public static let SegueRegToHome = "SegueRegToHome"
-    public static let SegueHomeToPortfolio = "SegueHomeToPortfolio"
-    public static let SegueHomeToDirectory = "SegueHomeToDirectory"
-    public static let SegueHomeToMore = "SegueHomeToMore"
+    public static let SegueMoreToMap = "SegueMoreToMap"
+    public static let SeguePortfolioToFullImage = "SeguePortfolioToFullImage"
+    public static let SeguePortfolioToWebView = "SeguePortfolioToWebView"
 }

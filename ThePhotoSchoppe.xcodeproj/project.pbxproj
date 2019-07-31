@@ -29,6 +29,12 @@
 		4DC6CE9322F0D1D6007ABE70 /* Photographer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6CE9222F0D1D6007ABE70 /* Photographer.swift */; };
 		4DC6CE9622F0D67E007ABE70 /* Directory.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6CE9522F0D67E007ABE70 /* Directory.plist */; };
 		4DC6CE9822F0D8E9007ABE70 /* DirectoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6CE9722F0D8E9007ABE70 /* DirectoryViewModel.swift */; };
+		4DC6CE9A22F18195007ABE70 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6CE9922F18195007ABE70 /* MapViewController.swift */; };
+		4DC6CE9C22F1AF9D007ABE70 /* PortfolioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6CE9B22F1AF9C007ABE70 /* PortfolioViewModel.swift */; };
+		4DC6CE9F22F1B0C9007ABE70 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6CE9E22F1B0C9007ABE70 /* APIManager.swift */; };
+		4DC6CEA122F1CC57007ABE70 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6CEA022F1CC57007ABE70 /* ImageCollectionViewCell.swift */; };
+		4DC6CEA322F1D008007ABE70 /* FullImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6CEA222F1D008007ABE70 /* FullImageViewController.swift */; };
+		4DC6CEA522F1D030007ABE70 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6CEA422F1D030007ABE70 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +61,12 @@
 		4DC6CE9222F0D1D6007ABE70 /* Photographer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photographer.swift; sourceTree = "<group>"; };
 		4DC6CE9522F0D67E007ABE70 /* Directory.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Directory.plist; sourceTree = "<group>"; };
 		4DC6CE9722F0D8E9007ABE70 /* DirectoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryViewModel.swift; sourceTree = "<group>"; };
+		4DC6CE9922F18195007ABE70 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4DC6CE9B22F1AF9C007ABE70 /* PortfolioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewModel.swift; sourceTree = "<group>"; };
+		4DC6CE9E22F1B0C9007ABE70 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		4DC6CEA022F1CC57007ABE70 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		4DC6CEA222F1D008007ABE70 /* FullImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullImageViewController.swift; sourceTree = "<group>"; };
+		4DC6CEA422F1D030007ABE70 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		84E0E7E99A01E2FB1FF0C2BC /* Pods-ThePhotoSchoppe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThePhotoSchoppe.release.xcconfig"; path = "Target Support Files/Pods-ThePhotoSchoppe/Pods-ThePhotoSchoppe.release.xcconfig"; sourceTree = "<group>"; };
 		D4C4081F7EB2754EE0C54CDC /* Pods-ThePhotoSchoppe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThePhotoSchoppe.debug.xcconfig"; path = "Target Support Files/Pods-ThePhotoSchoppe/Pods-ThePhotoSchoppe.debug.xcconfig"; sourceTree = "<group>"; };
 		FCC199C4421D586B21741B67 /* Pods_ThePhotoSchoppe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThePhotoSchoppe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +105,7 @@
 		4D4A02D022EF88EA00607FAD /* ThePhotoSchoppe */ = {
 			isa = PBXGroup;
 			children = (
+				4DC6CE9D22F1B08D007ABE70 /* Service */,
 				4DC6CE9422F0D64A007ABE70 /* Resources */,
 				4DC6CE9122F0D1A8007ABE70 /* Models */,
 				4DC6CE8422F0C1AA007ABE70 /* More */,
@@ -169,6 +182,10 @@
 			isa = PBXGroup;
 			children = (
 				4DC6CE8522F0C1CA007ABE70 /* PortfolioViewController.swift */,
+				4DC6CE9B22F1AF9C007ABE70 /* PortfolioViewModel.swift */,
+				4DC6CEA022F1CC57007ABE70 /* ImageCollectionViewCell.swift */,
+				4DC6CEA222F1D008007ABE70 /* FullImageViewController.swift */,
+				4DC6CEA422F1D030007ABE70 /* WebViewController.swift */,
 			);
 			path = Portfolio;
 			sourceTree = "<group>";
@@ -187,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				4DC6CE8922F0C20A007ABE70 /* MoreDetailsViewController.swift */,
+				4DC6CE9922F18195007ABE70 /* MapViewController.swift */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -205,6 +223,14 @@
 				4DC6CE9522F0D67E007ABE70 /* Directory.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		4DC6CE9D22F1B08D007ABE70 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4DC6CE9E22F1B0C9007ABE70 /* APIManager.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		AE6A0271D873D1D53CFE2A0F /* Pods */ = {
@@ -342,21 +368,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D4A02D422EF88EA00607FAD /* RegisterViewController.swift in Sources */,
+				4DC6CEA522F1D030007ABE70 /* WebViewController.swift in Sources */,
+				4DC6CE9F22F1B0C9007ABE70 /* APIManager.swift in Sources */,
 				4DC6CE8C22F0C944007ABE70 /* DirectoryTableViewController.swift in Sources */,
 				4DC6CE8622F0C1CA007ABE70 /* PortfolioViewController.swift in Sources */,
 				4D4A02EB22EF922C00607FAD /* RegisterViewModel.swift in Sources */,
 				4DC6CE9822F0D8E9007ABE70 /* DirectoryViewModel.swift in Sources */,
+				4DC6CEA122F1CC57007ABE70 /* ImageCollectionViewCell.swift in Sources */,
 				4D4A02ED22EF948300607FAD /* ColoredTextView.swift in Sources */,
 				4D4A02D222EF88EA00607FAD /* AppDelegate.swift in Sources */,
 				4DC6CE9022F0CFE9007ABE70 /* RoundedImageView.swift in Sources */,
 				4DC6CE8A22F0C20A007ABE70 /* MoreDetailsViewController.swift in Sources */,
 				4D4A02E722EF8F4D00607FAD /* RoundedView.swift in Sources */,
 				4D4A02E922EF915D00607FAD /* RoundedButton.swift in Sources */,
+				4DC6CE9C22F1AF9D007ABE70 /* PortfolioViewModel.swift in Sources */,
+				4DC6CEA322F1D008007ABE70 /* FullImageViewController.swift in Sources */,
 				4D4A02F122EF9A0B00607FAD /* Extensions.swift in Sources */,
 				4D4A02F322EF9B3E00607FAD /* Constants.swift in Sources */,
 				4DC6CE9322F0D1D6007ABE70 /* Photographer.swift in Sources */,
 				4DC6CE8122F0C009007ABE70 /* HomeTabViewController.swift in Sources */,
 				4DC6CE8E22F0CD06007ABE70 /* DirectoryTableViewCell.swift in Sources */,
+				4DC6CE9A22F18195007ABE70 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +536,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N626MRPF8F;
 				INFOPLIST_FILE = ThePhotoSchoppe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -522,6 +555,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N626MRPF8F;
 				INFOPLIST_FILE = ThePhotoSchoppe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

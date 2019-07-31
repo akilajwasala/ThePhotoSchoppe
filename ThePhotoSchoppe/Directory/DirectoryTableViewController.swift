@@ -26,13 +26,14 @@ class DirectoryTableViewController: UITableViewController {
         self.updateView()
     }
     
+    //If there are table view controllers more than one, and need to hide nav bars time to time we can use a BaseTableViewController and keep these methods as common
     override func viewWillAppear(_ animated: Bool) {
         viewModel.getAllPhotographers(callback: self)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        //self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     func updateView() {
@@ -85,7 +86,7 @@ class DirectoryTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DirectoryTableViewCell", for: indexPath) as! DirectoryTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.DirectoryTableViewCell, for: indexPath) as! DirectoryTableViewCell
         cell.setObject(photographer: directory[indexPath.row])
         return cell
     }

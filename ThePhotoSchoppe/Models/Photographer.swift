@@ -11,7 +11,7 @@ import UIKit
 struct Photographer: Codable {
     var imgUrl: String?
     var firstName: String?
-    var surname: String?
+    var surname: String
     var phoneNumber: String?
     var email: String?
 }

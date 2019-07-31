@@ -16,7 +16,7 @@ internal protocol UIGetDirectoryDelegate {
 class DirectoryViewModel {
 
     internal func getAllPhotographers(callback: UIGetDirectoryDelegate) {
-        callback.onGetDirectorySuccess(photographers: getDirectory())
+        callback.onGetDirectorySuccess(photographers: getDirectory().sorted(by: { $0.surname < $1.surname }))
     }
     
     func getDirectory() -> [Photographer] {
