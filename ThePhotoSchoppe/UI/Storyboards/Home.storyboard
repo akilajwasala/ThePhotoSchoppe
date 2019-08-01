@@ -145,7 +145,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="716-ji-Ftf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2581.1594202898555" y="1229.4642857142856"/>
+            <point key="canvasLocation" x="1680" y="1230"/>
         </scene>
         <!--More-->
         <scene sceneID="Dg7-2R-vnM">
@@ -264,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u6g-DA-kB0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3476.811594202899" y="1226.7857142857142"/>
+            <point key="canvasLocation" x="2577" y="1233"/>
         </scene>
         <!--Visit Us-->
         <scene sceneID="xeI-DS-4DZ">
@@ -296,7 +296,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p8O-Aa-jLD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4305.7971014492759" y="1222.7678571428571"/>
+            <point key="canvasLocation" x="2578" y="2003"/>
         </scene>
         <!--Flickr Feed-->
         <scene sceneID="NSb-dj-C7j">
@@ -382,7 +382,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wBN-cY-Nmy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1695.6521739130435" y="1228.7946428571429"/>
+            <point key="canvasLocation" x="801" y="2009"/>
         </scene>
         <!--Full Image View Controller-->
         <scene sceneID="2Q5-io-duk">
@@ -406,22 +406,34 @@
                                     <action selector="btnClickedClose:" destination="8iS-8a-gwU" eventType="touchUpInside" id="85k-vr-H4h"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="zHZ-od-pES">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zHZ-od-pES">
                                 <rect key="frame" x="157" y="807" width="100" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="905-4U-Vf0">
-                                        <rect key="frame" x="0.0" y="0.0" width="38" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="905-4U-Vf0" customClass="RoundedButton" customModule="ThePhotoSchoppe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="42.5" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="tintColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="email"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="btnClickedEmail:" destination="8iS-8a-gwU" eventType="touchUpInside" id="Pop-sV-2oe"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJX-ng-rj7">
-                                        <rect key="frame" x="62" y="0.0" width="38" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJX-ng-rj7" customClass="RoundedButton" customModule="ThePhotoSchoppe" customModuleProvider="target">
+                                        <rect key="frame" x="57.5" y="0.0" width="42.5" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="website"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="btnClickWebView:" destination="8iS-8a-gwU" eventType="touchUpInside" id="k4O-1T-vgr"/>
                                         </connections>
@@ -452,7 +464,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcV-1D-cIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="207" y="2050"/>
+            <point key="canvasLocation" x="291" y="2830"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="01G-q5-NQi">
@@ -486,7 +498,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2RE-hX-PBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1323" y="2049"/>
+            <point key="canvasLocation" x="1359" y="2828"/>
         </scene>
         <!--Home Tab View Controller-->
         <scene sceneID="V2f-U8-UFv">

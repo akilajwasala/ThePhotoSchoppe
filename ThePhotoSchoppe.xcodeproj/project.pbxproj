@@ -181,6 +181,17 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		4D2E012022F292F600B33EE7 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				4D4A02E622EF8F4D00607FAD /* RoundedView.swift */,
+				4D4A02E822EF915D00607FAD /* RoundedButton.swift */,
+				4D4A02EC22EF948300607FAD /* ColoredTextView.swift */,
+				4DC6CE8F22F0CFE9007ABE70 /* RoundedImageView.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
 		4D4A02C522EF88EA00607FAD = {
 			isa = PBXGroup;
 			children = (
@@ -229,10 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				4D4A02E522EF8F1B00607FAD /* Storyboards */,
-				4D4A02E622EF8F4D00607FAD /* RoundedView.swift */,
-				4D4A02E822EF915D00607FAD /* RoundedButton.swift */,
-				4D4A02EC22EF948300607FAD /* ColoredTextView.swift */,
-				4DC6CE8F22F0CFE9007ABE70 /* RoundedImageView.swift */,
+				4D2E012022F292F600B33EE7 /* UIComponents */,
 			);
 			path = UI;
 			sourceTree = "<group>";

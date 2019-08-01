@@ -29,10 +29,6 @@ public struct ReuseIdentifiers {
     public static let ImageCollectionViewCell = "ImageCollectionViewCell"
 }
 
-public struct NibName {
-
-}
-
 public struct NamedSegues {
     public static let SegueRegToHome = "SegueRegToHome"
     public static let SegueMoreToMap = "SegueMoreToMap"
@@ -50,6 +46,10 @@ public struct Strings {
     public static let ERROR_NO_EMAIL_BOX = "You have not configured the email box for this iphone"
     public static let ERROR_NO_IMAGE_URL = "Image URL is missing"
     public static let ERROR_API = "Invalid Request or Something Wrong"
+    public static let OK = "OK"
+    public static let CANCEL = "CANCEL"
+    public static let EMAIL_REGEX = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+    public static let MIME_TYPE_JPEG = "image/jpeg"
 }
 
 public struct DummyTexts {
@@ -63,4 +63,8 @@ public struct DummyTexts {
 public struct DateFormats {
     public static let ServerDateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
     public static let CommonDateFormat = "dd MMM YYYY"
+}
+
+public struct StatusCode {
+    public static let STATUS_OK = 200
 }

@@ -32,6 +32,8 @@ class DirectoryTableViewController: UITableViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
+    // MARK: - Top Image Animation
+
     func updateView() {
         tableView.backgroundColor = UIColor.white
         headerview = tableView.tableHeaderView

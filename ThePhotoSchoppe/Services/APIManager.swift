@@ -15,7 +15,7 @@ class APIManager {
         
         Alamofire.request(URLProvider.getUserPosts(), method: .get, headers: URLProvider.getHeaders()).responseJSON { response in
 
-            if response.response?.statusCode == 200 {
+            if response.response?.statusCode == StatusCode.STATUS_OK {
                 if let feed = try? response.deserialize(Feed.self) {
                     delegate(feed.items ?? [], true)
                 } else {
@@ -26,15 +26,6 @@ class APIManager {
             }
         }
         
-    }
-    
-}
-
-//Can use seperate file for all extentions
-extension DataResponse {
-    
-    func deserialize<T>(_ type: T.Type) throws -> T where T: Decodable {
-        return try JSONDecoder().decode(type, from: self.data!)
     }
     
 }

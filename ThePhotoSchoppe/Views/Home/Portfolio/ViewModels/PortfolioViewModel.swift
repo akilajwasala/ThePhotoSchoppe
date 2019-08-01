@@ -21,6 +21,7 @@ class PortfolioViewModel: NSObject {
         
         apiManager.getPhotoList { (imageItems, isSuccess) in
             if isSuccess {
+                //Best way is to get only 10 objects but couldn't find the parameter need to pass the item count
                 callback.onGetPortfolioSuccess(items: Array(imageItems.prefix(10)))
             } else {
                 callback.onGetPortfolioFailed(reason: Strings.ERROR_API)

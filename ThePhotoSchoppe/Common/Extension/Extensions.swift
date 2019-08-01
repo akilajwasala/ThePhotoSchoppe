@@ -9,11 +9,12 @@
 import Foundation
 import UIKit
 import PopupDialog
+import Alamofire
 
 extension String {
     
     func isValidEmail() -> Bool {
-        let regex = try! NSRegularExpression(pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", options: .caseInsensitive)
+        let regex = try! NSRegularExpression(pattern: Strings.EMAIL_REGEX, options: .caseInsensitive)
         return regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: count)) != nil
     }
 
@@ -37,10 +38,18 @@ extension UIViewController {
         let title = title
         let message = message
         let popup = PopupDialog(title: title, message: message, image: nil)
-        let button = CancelButton(title: (isError ? "Cancel" : "Ok")) {
+        let button = CancelButton(title: (isError ? Strings.CANCEL : Strings.OK)) {
             completion()
         }
         popup.addButtons([button])
         self.present(popup, animated: true, completion: nil)
     }
+}
+
+extension DataResponse {
+    
+    func deserialize<T>(_ type: T.Type) throws -> T where T: Decodable {
+        return try JSONDecoder().decode(type, from: self.data!)
+    }
+    
 }

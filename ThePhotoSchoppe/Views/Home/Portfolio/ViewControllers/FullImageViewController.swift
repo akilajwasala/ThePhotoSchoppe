@@ -19,6 +19,14 @@ class FullImageViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setImage()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.makeOtherViewsOnlyPortrait()
+    }
+    
+    fileprivate func setImage() {
         if let item = selectedItem {
             if let imageUrl = item.media?.m {
                 imgView?.sd_setImage(with: URL(string:imageUrl), completed: nil)
@@ -36,13 +44,8 @@ class FullImageViewController: BaseViewController {
     
     @IBAction func btnClickWebView(_ sender: UIButton) {
         self.dismiss(animated: true) {
-            self.makeOtherViewsOnlyPortrait()
             self.webSiteButtonClickClosure?(self.selectedItem!)
         }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        self.makeOtherViewsOnlyPortrait()
     }
     
     @IBAction func btnClickedEmail(_ sender: UIButton) {

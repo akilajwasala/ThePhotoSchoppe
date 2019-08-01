@@ -50,7 +50,7 @@ class PortfolioViewController: BaseViewController {
             if let url = item.media?.m {
                 let data = try? Data(contentsOf: URL(string: url)!)
                 if let imageData = data {
-                    mail.addAttachmentData(imageData, mimeType: "image/jpeg", fileName: item.date_taken!)
+                    mail.addAttachmentData(imageData, mimeType: Strings.MIME_TYPE_JPEG, fileName: item.date_taken!)
                     present(mail, animated: true)
                 }
             } else {
